@@ -1,0 +1,46 @@
+
+<div class="col-md-6 offset-md-3">
+    
+    <h3>Modifier un employé</h3>
+<form >    
+    
+        <div class="form-group ">
+            <label for="code">Code: </label>
+            <input type="text" class="form-control" [(ngModel)]= "projet.code" id="code" name="code" required>
+        </div>
+        <div class="form-group">
+            <label for="titre">Titre : </label>
+            <input type="text" class="form-control" [(ngModel)]= "projet.titre" id="titre" name="titre">
+        </div>
+        <div class="form-group">
+            <label for="type">Type : </label>
+            <input type="text" class="form-control" [(ngModel)]= "projet.type" id="type" name="type">
+        </div>
+        <div class="form-group">
+            <label for="description">Description : </label>
+            <input type="text" class="form-control" [(ngModel)]= "projet.description" id="description" name="description">
+        </div> 
+        <div class="form-group">
+            <label for="client">Client : </label>
+            <input type="text" class="form-control" [(ngModel)]= "projet.client" id="client" name="client" required>
+        </div>
+        <div class="form-group">
+            <label for="datedebut">Date de début : </label>
+            <input type="date" class="form-control" [(ngModel)]= "projet.datedebut" id="datedebut" name="datedebut" >
+        </div>
+        <div class="form-group">
+            <label for="datefinestimee">Date de fin estimée : </label>
+            <input type="date" class="form-control" [(ngModel)]= "projet.datefinestimee" id="datefinestimee" name="datefinestimee" required >
+        </div>
+        <div class="form-group">
+            <label for="datefinreel">Date de fin réel : </label>
+            <input type="date" class="form-control" [(ngModel)]= "projet.datefinreel" id="datefinreel" name="datefinreel" >
+        </div>
+              
+        
+
+        <button (click) = "onSubmit()" class="btn btn-success">Modifier</button>
+    
+</form>
+
+</div>

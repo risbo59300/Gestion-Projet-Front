@@ -1,0 +1,73 @@
+
+<div class="col-md-6 offset-md-3">
+    
+        <h3>Ajouter un employé</h3>
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit">    
+        
+            <div class="form-group" >
+                <label for="nom">Nom : </label>
+                <input type="text" class="form-control" [(ngModel)]= "employe.nom" id="nom" formControlName="nom" >
+                <div *ngIf="userForm.get('nom').hasError('required')" style="color: red;">
+                    Le nom est invalid
+                </div>
+            </div>
+
+            <div class="form-group ">
+                <label for="prenom">Prenom : </label>
+                <input type="text" class="form-control" [(ngModel)]= "employe.prenom" id="prenom" formControlName="prenom" >
+                <div *ngIf="userForm.get('prenom').hasError('required')" style="color: red;">
+                    Le prenom est invalid
+                  </div>
+            </div>
+
+            <div class="form-group">
+                <label for="mail">Mail : </label>
+                <input type="email" class="form-control" [(ngModel)]= "employe.mail" id="mail" formControlName="mail" >
+                <div *ngIf="userForm.get('email').hasError('required')" style="color: red;">
+                    L'email est un champ obligatoire
+                  </div>
+                  <div *ngIf="userForm.get('email').hasError('required')" style="color: orange;">    
+                    L'email est invalid (il doit comporter un @)
+                  </div>
+            </div>
+
+            <div class="form-group">
+                <label for="pwd">Password : </label>
+                <input type="text" class="form-control" [(ngModel)]= "employe.pwd" id="pwd" formControlName="pwd"  >
+                <div *ngIf="userForm.get('pwd').hasError('required')" style="color: red;">
+                    Le password est un champ obligatoire
+                  </div>
+            </div>
+
+            <div class="form-group">
+                <label for="departements">Departement :</label>
+                    <select [(ngModel)]="employe.departements.iddepartement"  class="form-control" id="departements" name="departements">                   
+                        <option *ngFor="let de of dep" [value]="de.iddepartement" >
+                            {{de.libelle}}
+                        </option>
+                    </select>   
+            </div>
+
+            <div class="form-group">
+                <label for="projets">Projet : </label>
+                <select [(ngModel)]="employe.projets.idprojet"  class="form-control" id="projets" name="projets">                   
+                    <option *ngFor="let p of pro" [value]="p.idprojet" >
+                        {{p.titre}}
+                    </option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="roles">Rôle : </label>
+                <select [(ngModel)]="employe.roles.idrole"  class="form-control" id="roles" name="roles">                   
+                    <option *ngFor="let r of rol" [value]="r.idrole" >
+                        {{r.libelle}}
+                    </option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn btn-success">Ajouter</button>
+        
+    </form>
+
+</div>

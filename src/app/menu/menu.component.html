@@ -1,0 +1,73 @@
+
+<nav class="navbar navbar-expand-lg navbar-success bg-light">
+    
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+
+        <li class="nav-item dropdown ">
+          <a class="nav-item dropdown-toggle" data-toggle="dropdown">            
+            Employés
+           </a>
+          <div class="dropdown-menu">
+            <a class="nav-link" [routerLink]="['employes']" routerLinkActive = "active">
+              Liste des Employés
+            </a>
+            <a class="nav-link" [routerLink]="['create-employes']" routerLinkActive = "active">
+              Ajouter Employé
+            </a>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown ">
+          <a class="nav-item dropdown-toggle" data-toggle="dropdown">
+            Departements
+           </a>
+          <div class="dropdown-menu">
+            <a class="nav-link" [routerLink]="['departements']" routerLinkActive = "active">
+              Liste des Departements
+            </a>
+            <a class="nav-link" [routerLink]="['create-departements']" routerLinkActive = "active">
+              Ajouter un Departement
+            </a>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown ">
+          <a class="nav-item dropdown-toggle" data-toggle="dropdown">
+            Projet
+           </a>
+          <div class="dropdown-menu">
+            <a class="nav-link" [routerLink]="['projets']" routerLinkActive = "active">
+              Liste des Projets
+            </a>
+            <a class="nav-link" [routerLink]="['create-projets']" routerLinkActive = "active">
+              Ajouter un Projet
+            </a>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown ">
+          <a class="nav-item dropdown-toggle" data-toggle="dropdown">
+            Agenda
+          </a>
+          <div class="dropdown-menu">
+            <a class="nav-link" [routerLink]="['agenda']" routerLinkActive = "active">
+              Liste des Agendas
+            </a>
+            <a class="nav-link" [routerLink]="['create-agenda']" routerLinkActive = "active">
+              Ajouter un Agenda
+            </a>
+          </div>
+        </li>
+
+        <li class="nav-item  ">
+          <a class="nav-item " [routerLink]="['login']" routerLinkActive = "active">
+            Login
+           </a>
+        </li>
+       
+      </ul>
+     
+    </div>
+  </nav>

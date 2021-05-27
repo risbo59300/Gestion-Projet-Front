@@ -1,0 +1,16 @@
+
+<div class="col-md-6 offset-md-3">
+    
+    <h3>Ajouter un Departemnt</h3>
+<form >    
+    
+        <div class="form-group">
+            <label for="libelle">Libellé : </label>
+            <input type="text" class="form-control" [(ngModel)]= "departements.libelle" id="libelle" name="libelle" required>
+        </div>
+
+        <button (click) = "onSubmit()" class="btn btn-primary">Ajouter</button>
+    
+</form>
+
+</div>

@@ -1,0 +1,32 @@
+
+<div class="container">
+    <div class="panel panel-primary">
+        <div class="panel-heading">Liste des Departements</div>
+        
+        <div class="table-responsive{-sm|-md|-lg|-xl}">
+            <table class="table table-stripped table-bordered table-hover  ">
+              <thead class="bg-success">
+                <tr>
+                    
+                  <th>Id</th>                  
+                  <th>Libellé</th>
+                  <th colspan="2">Action </th>
+                 
+                </tr>
+              </thead>
+              <tbody class="bg-warning">
+                <tr *ngFor = "let d of dept">
+
+                  <td>{{d.iddepartement}}</td>                 
+                  <td>{{d.libelle}}</td>                
+                  <td>
+                    <button (click) = "editDepartements(d.iddepartement)" class = "btn btn-info"> Update</button>
+                    <button (click) = "deleteDepartements(d.iddepartement)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+                </td>
+                </tr>                
+              </tbody>
+            </table>
+          </div>
+    </div>
+</div>
+

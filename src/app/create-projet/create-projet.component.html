@@ -1,0 +1,67 @@
+
+<div class="col-md-6 offset-md-3">
+    
+    <h3>Ajouter un Projet</h3>
+<form [formGroup]="userForm" (ngSubmit)="onSubmit">    
+    
+        <div class="form-group ">
+            <label for="code">Code: </label>
+            <input type="text" class="form-control" [(ngModel)]= "projet.code" id="code" formControlName="code" >
+            <div *ngIf="userForm.get('code').hasError('required')" style="color: red;">
+                Le code est un champ obligatoire
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="titre">Titre : </label>
+            <input type="text" class="form-control" [(ngModel)]= "projet.titre" id="titre" formControlName="titre">
+            <div *ngIf="userForm.get('titre').hasError('required')" style="color: red;">
+                Le titre est un champ obligatoire
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="type">Type : </label>
+            <input type="text" class="form-control" [(ngModel)]= "projet.type" id="type" formControlName="type">
+            <div *ngIf="userForm.get('type').hasError('required')" style="color: red;">
+                Le type est un champ obligatoire
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="description">Description : </label>
+            <input type="text" class="form-control" [(ngModel)]= "projet.description" id="description" formControlName="description">
+            <div *ngIf="userForm.get('description').hasError('required')" style="color: red;">
+                La description est un champ obligatoire
+            </div>
+        </div> 
+        <div class="form-group">
+            <label for="client">Client : </label>
+            <input type="text" class="form-control" [(ngModel)]= "projet.client" id="client" formControlName="client" >
+            <div *ngIf="userForm.get('client').hasError('required')" style="color: red;">
+                Le client est un champ obligatoire
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="datedebut">Date de début : </label>
+            <input type="date" class="form-control" [(ngModel)]= "projet.datedebut" id="datedebut" formControlName="datedebut" >
+            <div *ngIf="userForm.get('datedebut').hasError('required')" style="color: red;">
+                La date du début est un champ obligatoire
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="datefinestimee">Date de fin estimée : </label>
+            <input type="date" class="form-control" [(ngModel)]= "projet.datefinestimee" id="datefinestimee" formControlName="datefinestimee"  >
+            <div *ngIf="userForm.get('datefinestimee').hasError('required')" style="color: red;">
+                La date de fin estimee est un champ obligatoire
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="datefinreel">Date de fin réel : </label>
+            <input type="date" class="form-control" [(ngModel)]= "projet.datefinreel" id="datefinreel" name="datefinreel" >
+        </div>
+              
+        
+
+        <button type="submit" class="btn btn-success">Ajouter</button>
+    
+</form>
+
+</div>

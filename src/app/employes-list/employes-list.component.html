@@ -1,0 +1,43 @@
+
+<div class="container">
+    <div class="panel panel-primary">
+        <div class="panel-heading">Liste des employés</div>
+        
+        <div class="table-responsive{-sm|-md|-lg|-xl}">
+            <table class="table table-stripped table-bordered table-hover  ">
+              <thead class="bg-success">
+                <tr>
+                    
+                  <th>Id</th>                  
+                  <th>Nom</th>
+                  <th>Prenom</th>
+                  <th>Mail</th>
+                  <th>Password</th>
+                  <th>Id Departement</th>
+                  <th>Id Projet</th>
+                  <th>Id Rôle</th>
+                  <th colspan="3">Action </th>
+                 
+                </tr>
+              </thead>
+              <tbody class="bg-warning">
+                <tr *ngFor = "let employe of employ">
+
+                  <td>{{employe.idemploye}}</td>                 
+                  <td>{{employe.nom}}</td>
+                  <td>{{employe.prenom}}</td>
+                  <td>{{employe.mail}}</td>
+                  <td>{{employe.pwd}}</td>
+                  <td>{{employe.departements.libelle}}</td>
+                  <td>{{employe.projets.titre}}</td>
+                  <td>{{employe.roles.libelle}}</td>
+                  <td>
+                    <button (click) = "editEmployes(employe.idemploye)" class = "btn btn-info"> Update</button>
+                    <button (click) = "deleteEmployes(employe.idemploye)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+                </td>
+                </tr>                
+              </tbody>
+            </table>
+          </div>
+    </div>
+</div>
