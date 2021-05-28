@@ -1,7 +1,7 @@
 
 <div class="container">
     <div class="panel panel-primary">
-        <div class="panel-heading">Liste des employés</div>
+        <div class="panel-heading">Liste des Projets</div>
         
         <div class="table-responsive{-sm|-md|-lg|-xl}">
             <table class="table table-stripped table-bordered table-hover  ">
@@ -30,9 +30,9 @@
                   <td>{{p.titre}}</td>
                   <td>{{p.type}}</td>
                   <td>{{p.description}}</td>
-                  <td>{{p.datedebut}}</td>
-                  <td>{{p.datefinestimee}}</td>
-                  <td>{{p.datefinreel}}</td>
+                  <td>{{p.datedebut| json| date:'dd/MM/yyyy'}}</td>
+                  <td>{{p.datefinestimee| json| date:'dd/MM/yyyy'}}</td>
+                  <td>{{p.datefinreel| json| date:'dd/MM/yyyy'}}</td>
                   <td>
                     <button (click) = "editProjet(p.idprojet)" class = "btn btn-info"> Update</button>
                     <button (click) = "deleteProjet(p.idprojet)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
